@@ -1,0 +1,17 @@
+[
+{
+  "modid": "SyncCraft",
+  "name": "Sync Craft",
+  "description": "The basic ideals of Sync Craft, is that you can use the most basic items for Minecraft to make amazing items to help your survival in the world.",
+  "version": "0.0.1",
+  "mcversion": "1.6.2",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["Synerror80"],
+  "credits": "Thanks to everyone willing to help me solve my durps"
+  "parent": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
