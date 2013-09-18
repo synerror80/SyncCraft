@@ -11,6 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockStairs;
 import net.minecraft.block.BlockStep;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.MathHelper;
@@ -21,8 +22,12 @@ import net.minecraftforge.common.IPlantable;
 
 
 
+
 //Java Imports
 import java.util.Random;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 
 /** 
@@ -65,8 +70,14 @@ public class EnrichedGravel extends Block
 		setBurnProperties(this.blockID, 0, 0);
 		// this sets the blocks texture and where it is located in the mod
 
-		func_111022_d("synccraft:enrichedgravel64");
+		// func_111022_d("synccraft:");
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.blockIcon = ir.registerIcon("synccraft:enrichedgravel64");
+    }
 
 	 public static void setBurnProperties(int id, int encouragement, int flammability)
 	    {

@@ -13,6 +13,7 @@ import synccraft.core.SyncCraft;
 //MineCraft Imports
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.MathHelper;
@@ -21,8 +22,12 @@ import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
 
 
+
 //Java Imports
 import java.util.Random;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 
 /** 
@@ -68,10 +73,14 @@ public class EnrichedSand extends Block
 		
 		// this sets the blocks texture and where it is located in the mod
 		
-		func_111022_d("synccraft:enrichedsand64");
+		// func_111022_d("synccraft:");
 	}
   
-
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.blockIcon = ir.registerIcon("synccraft:enrichedsand64");
+    }
 	
 
 	

@@ -76,6 +76,15 @@ public class GypsumOre extends BlockBreakable
 
 		
 	}
+	
+	
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.blockIcon = ir.registerIcon("synccraft:enricheddirt64");
+    }
+	
+	
 	  @SideOnly(Side.CLIENT)
 
 	    /**

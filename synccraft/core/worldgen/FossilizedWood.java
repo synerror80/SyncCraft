@@ -19,8 +19,12 @@ import net.minecraft.item.Item;
 
 
 
+
 //Java Imports
 import java.util.Random;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 
 /** 
@@ -65,8 +69,16 @@ public class FossilizedWood extends Block
 
 		// this sets the blocks texture and where it is located in the mod
 
-		func_111022_d("synccraft:fossilizedwood");
+		 // func_111022_d("synccraft:fossilizedwood");
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.blockIcon = ir.registerIcon("synccraft:fossilizedwood");
+    }
+	
+	
 	// this will drop an amount of an item randomly
 	public int idDropped(int i, Random random, int fortune)
 	{

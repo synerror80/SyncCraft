@@ -19,8 +19,12 @@ import net.minecraft.item.Item;
 
 
 
+
 //Java Imports
 import java.util.Random;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 
 /** 
@@ -65,9 +69,13 @@ public class HardenedCobblestone extends Block
 
 		// this sets the blocks texture and where it is located in the mod
 
-		func_111022_d("synccraft:hardenedCobblestone64");
+		// func_111022_d("synccraft:");
 	}
 
-
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.blockIcon = ir.registerIcon("synccraft:hardenedCobblestone64");
+    }
 
 }
