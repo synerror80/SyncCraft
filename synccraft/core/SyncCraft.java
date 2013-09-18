@@ -218,7 +218,7 @@ public class SyncCraft
 
 		LanguageRegistry.addName(gypsum, "Gypsum");
 		LanguageRegistry.addName(kinoite, "Kinoite");
-		LanguageRegistry.addName(syncFurnaceIdle, "Sync Furnace");
+		LanguageRegistry.addName(syncFurnaceIdle, "Sync Furnace (WIP)");
 		// LanguageRegistry.addName(syncFurnaceBurning, "Sync Furnace Burning");
 		LanguageRegistry.addName(enrichedDirt, "Enriched Dirt");
 		LanguageRegistry.addName(naturalGlass, "Natural Glass ");
@@ -232,7 +232,7 @@ public class SyncCraft
 		LanguageRegistry.addName(darkArgutiteIngot, "Dark Argutite Ingot");
 		LanguageRegistry.addName(SyncCraft.humite, "Humite");
 		LanguageRegistry.addName(argutite, "Argutite");
-		LanguageRegistry.addName(syncHammer, "Sync Hammer");
+		LanguageRegistry.addName(syncHammer, "Sync Hammer WIP");
 		LanguageRegistry.addName(gypsumOre, "Gypsum Ore");
 		LanguageRegistry.addName(cobalt, "Cobalt");
 		LanguageRegistry.addName(fossilizedWood, "Fossilized Wood");

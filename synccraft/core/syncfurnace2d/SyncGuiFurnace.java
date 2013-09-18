@@ -7,14 +7,13 @@ import net.minecraft.util.ResourceLocation;
 
 import org.lwjgl.opengl.GL11;
 
-import synccraft.core.SyncContainerFurnace;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class SyncGuiFurnace extends GuiContainer
 {
-    private static final ResourceLocation furnaceGuiTextures = new ResourceLocation("textures/gui/container/furnace.png");
+    private static final ResourceLocation furnaceGuiTextures = new ResourceLocation("synccraft:textures/gui/container/furnace.png");
     private TileEntitySyncFurnace furnaceInventory;
 
     public SyncGuiFurnace(InventoryPlayer par1InventoryPlayer, TileEntitySyncFurnace par2TileEntityFurnace)

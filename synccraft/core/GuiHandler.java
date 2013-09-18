@@ -1,6 +1,7 @@
 package synccraft.core;
 
 
+import synccraft.core.syncfurnace2d.SyncContainerFurnace;
 import synccraft.core.syncfurnace2d.SyncGuiFurnace;
 import synccraft.core.syncfurnace2d.TileEntitySyncFurnace;
 import net.minecraft.entity.player.EntityPlayer;

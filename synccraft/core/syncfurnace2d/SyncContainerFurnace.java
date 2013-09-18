@@ -1,8 +1,5 @@
-package synccraft.core;
+package synccraft.core.syncfurnace2d;
 
-import synccraft.core.syncfurnace2d.SyncFurnaceRecipes;
-import synccraft.core.syncfurnace2d.SyncSlotFurnace;
-import synccraft.core.syncfurnace2d.TileEntitySyncFurnace;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
