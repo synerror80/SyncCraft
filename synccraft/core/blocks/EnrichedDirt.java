@@ -7,10 +7,16 @@ import static net.minecraftforge.common.ForgeDirection.UP;
 import java.util.Random;
 
 
+
+
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 //MineCraft Imports
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
@@ -61,9 +67,17 @@ public class EnrichedDirt extends Block
 		setResistance(5);
 
 		// this sets the blocks texture and where it is located in the mod
-
-		func_111022_d("synccraft:enricheddirt64");
+		
+		
+		
 	}
+	
+	
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.blockIcon = ir.registerIcon("synccraft:enricheddirt64");
+    }
 
 	private boolean isWaterNearby(World par1World, int par2, int par3, int par4)
     {
