@@ -7,10 +7,16 @@ import static net.minecraftforge.common.ForgeDirection.UP;
 import java.util.Random;
 
 
+
+
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 //MineCraft Imports
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 import net.minecraftforge.common.EnumPlantType;
@@ -61,11 +67,19 @@ public class EnrichedDirt extends Block
 		setResistance(5);
 
 		// this sets the blocks texture and where it is located in the mod
-
-		func_111022_d("synccraft:enricheddirt64");
+		
+		
+		
 	}
+	
+	
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.blockIcon = ir.registerIcon("synccraft:enricheddirt64");
+    }
 
-	private boolean isWaterNearby(World par1World, int par2, int par3, int par4)
+	private boolean isWaterNearby1(World par1World, int par2, int par3, int par4)
     {
         for (int l = par2 - 1; l <= par2 + 4; ++l)
         {
@@ -82,7 +96,7 @@ public class EnrichedDirt extends Block
         }
 		return false;
     }
-        private boolean isCropsNearby(World par1World, int par2, int par3, int par4)
+        private boolean isCropsNearby1(World par1World, int par2, int par3, int par4)
         {
             byte b0 = 0;
 
@@ -104,7 +118,7 @@ public class EnrichedDirt extends Block
 	
 	 public void updateTick(World par1World, int par2, int par3, int par4, Random par5Random)
 	    {
-	        if (!this.isWaterNearby(par1World, par2, par3, par4) && !par1World.canLightningStrikeAt(par2, par3 + 1, par4))
+	        if (!this.isWaterNearby1(par1World, par2, par3, par4) && !par1World.canLightningStrikeAt(par2, par3 + 1, par4))
 	        {
 	            int l = par1World.getBlockMetadata(par2, par3, par4);
 
@@ -112,7 +126,7 @@ public class EnrichedDirt extends Block
 	            {
 	                par1World.setBlockMetadataWithNotify(par2, par3, par4, l - 1, 2);
 	            }
-	            else if (!this.isCropsNearby(par1World, par2, par3, par4))
+	            else if (!this.isCropsNearby1(par1World, par2, par3, par4))
 	            {
 	                par1World.setBlock(par2, par3, par4, SyncCraft.enrichedDirt.blockID);
 	            }
@@ -125,7 +139,7 @@ public class EnrichedDirt extends Block
 
 		
 	
-	  public boolean canSustainPlant(World world, int x, int y, int z, ForgeDirection direction, IPlantable plant)
+	  public boolean canSustainPlant1(World world, int x, int y, int z, ForgeDirection direction, IPlantable plant)
 	    {
 	        int plantID = plant.getPlantID(world, x, y + 1, z);
 	        EnumPlantType plantType = plant.getPlantType(world, x, y + 1, z);
@@ -178,7 +192,7 @@ public class EnrichedDirt extends Block
 	     * @param z Z position
 	     * @return True if the soil should be considered fertile.
 	     */
-	    public boolean isFertile(World world, int x, int y, int z)
+	    public boolean isFertile1(World world, int x, int y, int z)
 	    {
 	        if (blockID == SyncCraft.enrichedDirt.blockID)
 	        {
@@ -191,7 +205,7 @@ public class EnrichedDirt extends Block
 	    /**
 	     * Apply bonemeal to the crops.
 	     */
-	    public void fertilize(World par1World, int par2, int par3, int par4)
+	    public void fertilize1(World par1World, int par2, int par3, int par4)
 	    {
 	        int l = par1World.getBlockMetadata(par2, par3, par4) + MathHelper.getRandomIntegerInRange(par1World.rand, 5, 1);
 
@@ -233,7 +247,7 @@ public class EnrichedDirt extends Block
 	     * different sides that aren't opposing, and by adding growth for every crop next to this one (and for crop below
 	     * this one). Args: x, y, z
 	     */
-	    private float setGrowthRate(World par1World, int par2, int par3, int par4)
+	    private float setGrowthRate1(World par1World, int par2, int par3, int par4)
 	    {
 	        float f = 1.0F;
 	        int l = par1World.getBlockId(par2, par3, par4 - 1);

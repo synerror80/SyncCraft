@@ -11,6 +11,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 import synccraft.core.SyncCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.EnumToolMaterial;
@@ -52,8 +53,14 @@ public class SyncHammer extends Item  {
 			
 			
 			// this sets the blocks texture and where it is located in the mod		
-			func_111206_d("synccraft:synchammer");	
+			// func_111206_d("synccraft:synchammer");	
 		}
+		
+		@SideOnly(Side.CLIENT)
+	    public void registerIcons(IconRegister ir)
+	    {
+	            this.itemIcon = ir.registerIcon("synccraft:synchammer");
+	    }
 			
 	
 		

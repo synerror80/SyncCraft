@@ -6,10 +6,13 @@ package synccraft.core.items;
 //Sync Craft imports
 import java.util.Random;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 import synccraft.core.SyncCraft;
 //Forge imports
 
 
+import net.minecraft.client.renderer.texture.IconRegister;
 //MineCraft Imports
 import net.minecraft.item.Item;
 
@@ -45,8 +48,14 @@ public class Argutite extends Item {
 		setFull3D();
 
 		// this sets the blocks texture and where it is located in the mod		
-		func_111206_d("synccraft:argutite");
+		// func_111206_d("synccraft:");
 	}
+	
+	@SideOnly(Side.CLIENT)
+    public void registerIcons(IconRegister ir)
+    {
+            this.itemIcon = ir.registerIcon("synccraft:argutite");
+    }
 
     public int quantityDropped(Random random)
     {
