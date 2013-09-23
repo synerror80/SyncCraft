@@ -36,18 +36,40 @@ import synccraft.core.SyncCraft;
  *
  */
 
-public class EnrichedDirt extends Block  
+public class EnrichedDirtold extends Block  
 {
 
-	public EnrichedDirt(int id, Material material) {
+	public EnrichedDirtold(int id, Material material) {
 		super(id, material);
 		setUnlocalizedName("enrichedDirt");
+		// set how many hits it takes to break the block
 		setHardness(1.0f);
+
+		// set the CreativeTab to display this block on
 		setCreativeTab(SyncCraft.syncCraftTabs);
+
+		//Sets the footstep sound for the block. Returns the object for convenience in constructing.
 		setStepSound(Block.soundStoneFootstep);
-		setTickRandomly(true);		
+
+		//This method will make the hardness of the block equals to -1, and the block is indestructible.
+		// setBlockUnbreakable();
+
+		//Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
+
+
+
+		//Sets whether this block type will receive random update ticks
+		setTickRandomly(true);
+		
+		
+		
+		//Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.
 		setResistance(5);
 
+		// this sets the blocks texture and where it is located in the mod
+		
+		
+		
 	}
 	
 	

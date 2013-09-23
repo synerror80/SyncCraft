@@ -9,7 +9,7 @@ import net.minecraft.item.ItemReed;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.src.ModLoader;
-import synccraft.core.blocks.EnrichedDirt;
+import synccraft.core.blocks.EnrichedDirtold;
 import synccraft.core.blocks.EnrichedGravel;
 import synccraft.core.blocks.EnrichedSand;
 import synccraft.core.blocks.HardenedCobblestone;
@@ -83,7 +83,7 @@ public class SyncCraft
 	EventManager oreManager = new EventManager();
 
 	// Blocks set here
-	public static Block enrichedDirt = new EnrichedDirt(4007, Material.ground);
+	public static Block enrichedDirt = new EnrichedDirtold(4007, Material.ground);
 	public static Block enrichedGravel = new EnrichedGravel(4008, Material.rock);
 	public static Block enrichedSand = new EnrichedSand(4009, Material.sand);
 	public static Block hardenedCobblestone = new HardenedCobblestone(4010, Material.rock);

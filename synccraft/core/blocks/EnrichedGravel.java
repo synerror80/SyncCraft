@@ -2,32 +2,18 @@ package synccraft.core.blocks;
 
 
 //Sync Craft imports
-import static net.minecraftforge.common.ForgeDirection.UP;
 import synccraft.core.SyncCraft;
-//Forge imports
-
-//MineCraft Imports
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockStairs;
-import net.minecraft.block.BlockStep;
-import net.minecraft.block.material.Material;
-import net.minecraft.client.particle.EntitySmokeFX;
-import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.MathHelper;
-import net.minecraft.world.IBlockAccess;
-import net.minecraft.world.World;
-import net.minecraftforge.common.ForgeDirection;
-import net.minecraftforge.common.IPlantable;
-
-
-
-
 
 //Java Imports
 import java.util.Random;
 
+//MineCraft Imports
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.world.World;
+
+//Forge imports
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -67,9 +53,17 @@ public class EnrichedGravel extends Block
 	@SideOnly(Side.CLIENT)
     public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
-         
-        
-        
+		 float f = (float)par2 + 1.0F;
+         float f1 = (float)par3 + 1.0F + par5Random.nextFloat() * 12.0F / 48.0F;
+         float f2 = (float)par4 + 0.5F;
+         float f3 = 0.5F;
+         float f4 = par5Random.nextFloat() * 0.6F - 0.3F;
+
+        par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.0D);
+        par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, 0.0D);
+        par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.3D);
+        par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, -0.3D);
+
     }
 	
 
