@@ -31,24 +31,11 @@ public class Argutite extends Item {
 	public Argutite(int id) {
 		super(id);
 		setUnlocalizedName("argutite");
-		
-		// set the CreativeTab to display this block on
 		setCreativeTab(SyncCraft.syncCraftTabs);
-			
-		//	Call to disable repair recipes.
 		setNoRepair();	
-
-		//set max damage of an Item
 		setMaxDamage(10);
-			
-		// this sets how many items can stack on each other
 		setMaxStackSize(64);
-
-		// Sets bFull3D to True and return the object.
 		setFull3D();
-
-		// this sets the blocks texture and where it is located in the mod		
-		// func_111206_d("synccraft:");
 	}
 	
 	@SideOnly(Side.CLIENT)

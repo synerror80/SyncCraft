@@ -122,9 +122,9 @@ public class SyncFurnace extends BlockContainer
     
     public void registerIcons(IconRegister par1IconRegister)  // "furnace_side"
     {
-        this.blockIcon = par1IconRegister.registerIcon("synccraft:furnace_side");
-        this.furnaceIconFront = par1IconRegister.registerIcon(this.isActive ? "synccraft:furnace_front_on" : "synccraft:furnace_front_off");
-        this.furnaceIconTop = par1IconRegister.registerIcon("synccraft:furnace_top");
+        this.blockIcon = par1IconRegister.registerIcon("furnace_side");
+        this.furnaceIconFront = par1IconRegister.registerIcon(this.isActive ? "furnace_front_on" : "furnace_front_off");
+        this.furnaceIconTop = par1IconRegister.registerIcon("furnace_top");
     } 
 
     /**
@@ -186,7 +186,7 @@ public class SyncFurnace extends BlockContainer
     {
         if (this.isActive)
         {
-        	int l = par1World.getBlockMetadata(par2, par3, par4);
+            int l = par1World.getBlockMetadata(par2, par3, par4);
             float f = (float)par2 + 0.5F;
             float f1 = (float)par3 + 0.0F + par5Random.nextFloat() * 6.0F / 16.0F;
             float f2 = (float)par4 + 0.5F;
@@ -195,37 +195,23 @@ public class SyncFurnace extends BlockContainer
 
             if (l == 4)
             {
-            
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.3D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, -0.3D);
-               
+                par1World.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 5)
             {
-            	
-            	par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.3D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, -0.3D);
-                
+                par1World.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 2)
             {
-            	
-            	par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.3D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, -0.3D);
+                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 3)
             {
-           
-            	par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, 0.0D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.4D, 5.3D, 0.3D);
-                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), -0.4D, 5.9D, -0.3D);
+                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
             }
         }
     }
