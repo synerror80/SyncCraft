@@ -31,36 +31,23 @@ public class Gypsum extends Item {
 	public Gypsum(int id) {
 		super(id);
 		setUnlocalizedName("gypsum");
-		
-		// set the CreativeTab to display this block on
 		setCreativeTab(SyncCraft.syncCraftTabs);
-			
-		//	Call to disable repair recipes.
 		setNoRepair();	
-
-		//set max damage of an Item
 		setMaxDamage(10);
-			
-		// this sets how many items can stack on each other
 		setMaxStackSize(64);
-
-		// Sets bFull3D to True and return the object.
 		setFull3D();
-
-		// this sets the blocks texture and where it is located in the mod		
-		// func_111206_d("synccraft:gypsum");
 	}
-	
-	@SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister ir)
-    {
-            this.itemIcon = ir.registerIcon("synccraft:gypsum");
-    }
 
-    public int quantityDropped(Random random)
-    {
-     
-        return (5);
-    }
-	
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister ir)
+	{
+		this.itemIcon = ir.registerIcon("synccraft:gypsum");
+	}
+
+	public int quantityDropped(Random random)
+	{
+
+		return (5);
+	}
+
 }

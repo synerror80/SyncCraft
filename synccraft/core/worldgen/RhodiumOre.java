@@ -42,34 +42,14 @@ public class RhodiumOre extends Block
 	{
 		super(id, material);
 		setUnlocalizedName("rhodiumore");
-
-		// set how many hits it takes to break the block
 		setHardness(1.0f);
-
-		// set the CreativeTab to display this block on
 		setCreativeTab(SyncCraft.syncCraftTabs);
-
-		//Sets the footstep sound for the block. Returns the object for convenience in constructing.
 		setStepSound(Block.soundStoneFootstep);
-
-		//This method will make the hardness of the block equals to -1, and the block is indestructible.
 		// setBlockUnbreakable();
-
-		//Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
 		//setLightOpacity(10);
-
-		//Sets whether this block type will receive random update ticks
 		// setTickRandomly(true);
-
-		// Sets the amount of light emitted by a block from 0.0f to 1.0f (converts internally to 0-15). Returns the object for convenience in constructing.
 		setLightValue(0.15f);
-
-		//Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.
 		setResistance(5);
-
-		// this sets the blocks texture and where it is located in the mod
-
-		// func_111022_d("synccraft:rhodium");
 	}
 	
 	

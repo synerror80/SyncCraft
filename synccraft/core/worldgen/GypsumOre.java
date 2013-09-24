@@ -44,61 +44,38 @@ public class GypsumOre extends BlockBreakable
 	{
 		super(par1, "synccraft:gypsumore", par2Material, par3);
 		setUnlocalizedName("gypsumOre");
-		
-		
-		
-		// set how many hits it takes to break the block
 		setHardness(1.0f);
-
-		// set the CreativeTab to display this block on
 		setCreativeTab(SyncCraft.syncCraftTabs);
-
-		//Sets the footstep sound for the block. Returns the object for convenience in constructing.
 		setStepSound(Block.soundStoneFootstep);
-
-		//This method will make the hardness of the block equals to -1, and the block is indestructible.
 		// setBlockUnbreakable();
-
-		
-		//Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
 		//setLightOpacity(50);
-
-		//Sets whether this block type will receive random update ticks
 		// setTickRandomly(true);
-
-		// Sets the amount of light emitted by a block from 0.0f to 1.0f (converts internally to 0-15). Returns the object for convenience in constructing.
 		//setLightValue(0.0f);
-
-		//Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.
 		setResistance(5);
-
-		// this sets the blocks texture and where it is located in the mod
-
-		
 	}
-	
-	
-	@SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister ir)
-    {
-            this.blockIcon = ir.registerIcon("synccraft:enricheddirt64");
-    }
-	
-	
-	  @SideOnly(Side.CLIENT)
 
-	    /**
-	     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
-	     */
-	    public int getRenderBlockPass()
-	    {
-	        return 0;
-	    }
-	  
-	   public boolean isOpaqueCube()
-	    {
-	        return true;
-	    }
+
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister ir)
+	{
+		this.blockIcon = ir.registerIcon("synccraft:enricheddirt64");
+	}
+
+
+	@SideOnly(Side.CLIENT)
+
+	/**
+	 * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+	 */
+	public int getRenderBlockPass()
+	{
+		return 0;
+	}
+
+	public boolean isOpaqueCube()
+	{
+		return true;
+	}
 	// this will drop an amount of an item randomly
 	public int idDropped(int i, Random random, int fortune)
 	{

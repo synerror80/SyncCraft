@@ -220,7 +220,7 @@ public class SyncCraft
 		LanguageRegistry.addName(kinoite, "Kinoite");
 		LanguageRegistry.addName(syncFurnaceIdle, "Sync Furnace (WIP)");
 		// LanguageRegistry.addName(syncFurnaceBurning, "Sync Furnace Burning");
-		LanguageRegistry.addName(enrichedDirt, "Enriched Dirt");
+		LanguageRegistry.addName(enrichedDirt, "Enriched Dirt (WIP)");
 		LanguageRegistry.addName(naturalGlass, "Natural Glass ");
 		LanguageRegistry.addName(hardenedGlass, "Hardened Glass ");
 		LanguageRegistry.addName(hardenedCobblestone, "Hardened Cobblestone");

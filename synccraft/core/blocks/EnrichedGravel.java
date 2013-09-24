@@ -57,13 +57,11 @@ public class EnrichedGravel extends Block
 		setBurnProperties(this.blockID, 0, 0);
 		// func_111022_d("synccraft:"); // this is an old block texture method 
 	}
-
 	@SideOnly(Side.CLIENT) // Sets the Blocks Texture new as of 9/15/2013
 	public void registerIcons(IconRegister ir)
 	{
 		this.blockIcon = ir.registerIcon("synccraft:enrichedgravel64");
 	}
-
 	@SideOnly(Side.CLIENT)
     public void randomDisplayTick(World par1World, int par2, int par3, int par4, Random par5Random)
     {
