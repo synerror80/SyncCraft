@@ -1,11 +1,6 @@
 package synccraft.core.items;
 
 
-
-//Sync Craft imports
-
-//Forge imports
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import synccraft.core.SyncCraft;
@@ -15,9 +10,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.EnumAction;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.EnumToolMaterial;
-//MineCraft Imports
 import net.minecraft.item.Item;
-//Java Imports
 import net.minecraft.item.ItemStack;
 
 /** 

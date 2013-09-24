@@ -1,6 +1,5 @@
 package synccraft.core;
 
-
 import synccraft.core.syncfurnace2d.SyncContainerFurnace;
 import synccraft.core.syncfurnace2d.SyncGuiFurnace;
 import synccraft.core.syncfurnace2d.TileEntitySyncFurnace;
@@ -8,6 +7,15 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
+
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
 
 public class GuiHandler implements IGuiHandler{
 

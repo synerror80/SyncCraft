@@ -1,7 +1,5 @@
 package synccraft.core.syncfurnace2d;
 
-
-
 import synccraft.core.SyncFurnace;
 import synccraft.core.SyncCraft;
 import net.minecraft.block.Block;
@@ -20,6 +18,16 @@ import net.minecraft.tileentity.TileEntity;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
+
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
 
 
 public class TileEntitySyncFurnace extends TileEntity implements ISidedInventory

@@ -2,9 +2,7 @@ package synccraft.core;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
 import java.util.Random;
-
 import synccraft.core.syncfurnace2d.TileEntitySyncFurnace;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -22,6 +20,15 @@ import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.Icon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
+
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
 
 public class SyncFurnace extends BlockContainer
 {

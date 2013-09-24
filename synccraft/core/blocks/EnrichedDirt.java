@@ -1,18 +1,9 @@
 package synccraft.core.blocks;
 
-
-//Sync Craft imports
 import static net.minecraftforge.common.ForgeDirection.UP;
-
 import java.util.Random;
-
-
-
-
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-//MineCraft Imports
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockFlower;
 import net.minecraft.block.material.Material;
@@ -23,9 +14,6 @@ import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.ForgeDirection;
 import net.minecraftforge.common.IPlantable;
 import synccraft.core.SyncCraft;
-//Forge imports
-//Java Imports
-
 
 /** 
  * 
@@ -47,81 +35,81 @@ public class EnrichedDirt extends Block
 		setStepSound(Block.soundStoneFootstep);
 		setTickRandomly(true);
 		setResistance(5);
-		
-		
-		
+
+
+
 	}
-	
-    
+
+
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister ir)
 	{
 		this.blockIcon = ir.registerIcon("synccraft:enricheddirt64");
 	}
 
-	 public boolean canSustainPlant(World world, int x, int y, int z, ForgeDirection direction, IPlantable plant)
-	    {
-	        int plantID = plant.getPlantID(world, x, y + 1, z);
-	        EnumPlantType plantType = plant.getPlantType(world, x, y + 1, z);
+	public boolean canSustainPlant(World world, int x, int y, int z, ForgeDirection direction, IPlantable plant)
+	{
+		int plantID = plant.getPlantID(world, x, y + 1, z);
+		EnumPlantType plantType = plant.getPlantType(world, x, y + 1, z);
 
-	        if (plantID == cactus.blockID)
-	        {
-	            return true;
-	        }
+		if (plantID == cactus.blockID)
+		{
+			return true;
+		}
 
-	        if (plantID == reed.blockID )
-	        {
-	            return true;
-	        }
-	        if (plantID == reed.blockID )
-	        {
-	            return true;
-	        }
-	        if (plantID == waterlily.blockID)
-	        {
-	            return true;
-	        }
-	        if (plantID == waterlily.blockID)
-	        {
-	            return true;
-	        } 
-	         switch (plantType)
-	        {
-	            case Desert: return blockID == SyncCraft.enrichedDirt.blockID;
-	            case Nether: return blockID == SyncCraft.enrichedDirt.blockID;
-	            case Crop:   return blockID == SyncCraft.enrichedDirt.blockID;
-	            case Cave:   return isBlockSolidOnSide(world, x, y, z, UP);
-	            case Plains: return blockID == SyncCraft.enrichedDirt.blockID || blockID == SyncCraft.enrichedDirt.blockID;
-	            case Water:  return world.getBlockMaterial(x, y, z) == Material.water && world.getBlockMetadata(x, y, z) == 0;
-	            case Beach:
-	                boolean isBeach = (blockID == SyncCraft.enrichedDirt.blockID || blockID == SyncCraft.enrichedDirt.blockID || blockID == SyncCraft.enrichedDirt.blockID);
-	                boolean hasWater = (world.getBlockMaterial(x - 1, y, z    ) == Material.water ||
-	                                    world.getBlockMaterial(x + 1, y, z    ) == Material.water ||
-	                                    world.getBlockMaterial(x,     y, z - 1) == Material.water ||
-	                                    world.getBlockMaterial(x,     y, z + 1) == Material.water);
-	                return isBeach && hasWater;
-	        } 
+		if (plantID == reed.blockID )
+		{
+			return true;
+		}
+		if (plantID == reed.blockID )
+		{
+			return true;
+		}
+		if (plantID == waterlily.blockID)
+		{
+			return true;
+		}
+		if (plantID == waterlily.blockID)
+		{
+			return true;
+		} 
+		switch (plantType)
+		{
+		case Desert: return blockID == SyncCraft.enrichedDirt.blockID;
+		case Nether: return blockID == SyncCraft.enrichedDirt.blockID;
+		case Crop:   return blockID == SyncCraft.enrichedDirt.blockID;
+		case Cave:   return isBlockSolidOnSide(world, x, y, z, UP);
+		case Plains: return blockID == SyncCraft.enrichedDirt.blockID || blockID == SyncCraft.enrichedDirt.blockID;
+		case Water:  return world.getBlockMaterial(x, y, z) == Material.water && world.getBlockMetadata(x, y, z) == 0;
+		case Beach:
+			boolean isBeach = (blockID == SyncCraft.enrichedDirt.blockID || blockID == SyncCraft.enrichedDirt.blockID || blockID == SyncCraft.enrichedDirt.blockID);
+			boolean hasWater = (world.getBlockMaterial(x - 1, y, z    ) == Material.water ||
+					world.getBlockMaterial(x + 1, y, z    ) == Material.water ||
+					world.getBlockMaterial(x,     y, z - 1) == Material.water ||
+					world.getBlockMaterial(x,     y, z + 1) == Material.water);
+			return isBeach && hasWater;
+		} 
 
-	        return false;
-	    }
-		
-	    public boolean isFertile(World world, int x, int y, int z)
-	    {
-	        if (blockID == SyncCraft.enrichedDirt.blockID)
-	        {
-	            return world.getBlockMetadata(x, y, z) > 0;
-	        }
+		return false;
+	}
 
-	        return false;
-	    }
-	 	  
-	    public Block setTickRandomly(boolean par1)
-	    {
-	        this.needsRandomTick = par1;
-	        return this;
-	    }
+	public boolean isFertile(World world, int x, int y, int z)
+	{
+		if (blockID == SyncCraft.enrichedDirt.blockID)
+		{
+			return world.getBlockMetadata(x, y, z) > 0;
+		}
 
-	
+		return false;
+	}
+
+	public Block setTickRandomly(boolean par1)
+	{
+		this.needsRandomTick = par1;
+		return this;
+	}
+
+
 }
 
 

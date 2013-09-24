@@ -1,22 +1,13 @@
 package synccraft.core.items;
 
-
-
-
-//Sync Craft imports
 import java.util.Random;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import synccraft.core.SyncCraft;
-//Forge imports
-
-
 import net.minecraft.client.renderer.texture.IconRegister;
-//MineCraft Imports
 import net.minecraft.item.Item;
 
-//Java Imports
 
 /** 
  * 

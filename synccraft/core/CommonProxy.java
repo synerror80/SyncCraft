@@ -1,13 +1,5 @@
 package synccraft.core;
 
-//Sync Craft imports
-
-//Forge imports
-
-//MineCraft Imports
-
-//Java Imports
-
 /** 
  * 
  * Remember you do backups of mod. Only make large changes to non

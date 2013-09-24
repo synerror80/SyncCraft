@@ -1,12 +1,20 @@
 package synccraft.core;
 
 import java.util.Random;
-
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
+
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
 
 public class EventManager implements IWorldGenerator {
 

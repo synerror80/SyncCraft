@@ -1,22 +1,7 @@
-/**
- * 
- */
+
 package synccraft.core.client;
 
-//Sync Craft imports
 import synccraft.core.CommonProxy;
-
-
-//Forge imports
-
-
-
-//MineCraft Imports
-import net.minecraftforge.client.MinecraftForgeClient;
-
-
-//Java Imports
-
 
 /** 
  * 

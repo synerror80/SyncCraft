@@ -10,6 +10,16 @@ import org.lwjgl.opengl.GL11;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
+
+
 @SideOnly(Side.CLIENT)
 public class SyncGuiFurnace extends GuiContainer
 {

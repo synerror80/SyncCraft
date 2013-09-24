@@ -11,6 +11,16 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.AchievementList;
 import net.minecraft.util.MathHelper;
 
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
+
+
 public class SyncSlotFurnace extends Slot
 {
     /** The player that is using the GUI where this slot resides. */

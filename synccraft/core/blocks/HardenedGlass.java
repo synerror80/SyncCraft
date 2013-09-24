@@ -2,64 +2,71 @@ package synccraft.core.blocks;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-
 import java.util.Random;
-
 import synccraft.core.SyncCraft;
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
+
 public class HardenedGlass extends BlockBreakable
 {
-    public HardenedGlass(int par1, Material par2Material, boolean par3)
-    {
-        super(par1, "synccraft:hardenedglass", par2Material, par3);
-        this.setCreativeTab(SyncCraft.syncCraftTabs);;
-        setHardness(15);
-        
-    }
+	public HardenedGlass(int par1, Material par2Material, boolean par3)
+	{
+		super(par1, "synccraft:hardenedglass", par2Material, par3);
+		this.setCreativeTab(SyncCraft.syncCraftTabs);;
+		setHardness(15);
 
-    /**
-     * Returns the quantity of items to drop on block destruction.
-     */
-    public int quantityDropped(Random par1Random)
-    {
-        return 1;
-    }
+	}
 
-    @SideOnly(Side.CLIENT)
+	/**
+	 * Returns the quantity of items to drop on block destruction.
+	 */
+	public int quantityDropped(Random par1Random)
+	{
+		return 1;
+	}
 
-    /**
-     * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
-     */
-    public int getRenderBlockPass()
-    {
-        return 0;
-    }
+	@SideOnly(Side.CLIENT)
 
-    /**
-     * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
-     * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
-     */
-    public boolean isOpaqueCube()
-    {
-        return false;
-    }
+	/**
+	 * Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+	 */
+	public int getRenderBlockPass()
+	{
+		return 0;
+	}
 
-    /**
-     * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
-     */
-    public boolean renderAsNormalBlock()
-    {
-        return false;
-    }
+	/**
+	 * Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two
+	 * adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	 */
+	public boolean isOpaqueCube()
+	{
+		return false;
+	}
 
-    /**
-     * Return true if a player with Silk Touch can harvest this block directly, and not its normal drops.
-     */
-    protected boolean canSilkHarvest()
-    {
-        return false;
-    }
+	/**
+	 * If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	 */
+	public boolean renderAsNormalBlock()
+	{
+		return false;
+	}
+
+	/**
+	 * Return true if a player with Silk Touch can harvest this block directly, and not its normal drops.
+	 */
+	protected boolean canSilkHarvest()
+	{
+		return false;
+	}
 }

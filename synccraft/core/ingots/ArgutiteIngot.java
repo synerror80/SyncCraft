@@ -1,20 +1,11 @@
 package synccraft.core.ingots;
 
-
-
-
-//Sync Craft imports
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import synccraft.core.SyncCraft;
-//Forge imports
-
-
 import net.minecraft.client.renderer.texture.IconRegister;
-//MineCraft Imports
-import net.minecraft.item.Item;
 
-//Java Imports
+import net.minecraft.item.Item;
 
 /** 
  * 
@@ -35,11 +26,11 @@ public class ArgutiteIngot extends Item {
 		setMaxStackSize(64);
 		setFull3D();
 	}
-	
+
 	@SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister ir)
-    {
-            this.itemIcon = ir.registerIcon("synccraft:argutiteingot");
-    }
+	public void registerIcons(IconRegister ir)
+	{
+		this.itemIcon = ir.registerIcon("synccraft:argutiteingot");
+	}
 
 }

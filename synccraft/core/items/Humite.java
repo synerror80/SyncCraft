@@ -1,20 +1,11 @@
 package synccraft.core.items;
 
-
-
-
-//Sync Craft imports
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import synccraft.core.SyncCraft;
-//Forge imports
-
-
 import net.minecraft.client.renderer.texture.IconRegister;
-//MineCraft Imports
 import net.minecraft.item.Item;
 
-//Java Imports
 
 /** 
  * 
@@ -37,9 +28,9 @@ public class Humite extends Item {
 	}
 
 	@SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister ir)
-    {
-            this.itemIcon = ir.registerIcon("synccraft:humite");
-    }
-	
+	public void registerIcons(IconRegister ir)
+	{
+		this.itemIcon = ir.registerIcon("synccraft:humite");
+	}
+
 }

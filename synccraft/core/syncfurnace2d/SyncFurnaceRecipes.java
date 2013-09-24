@@ -10,6 +10,16 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+/** 
+ * 
+ * Remember you do backups of mod. Only make large changes to none
+ * main mod class files and always comment your code !!!!
+ * 
+ * @author SynERror8o
+ *
+ */
+
+
 public class SyncFurnaceRecipes
 {
     private static final SyncFurnaceRecipes smeltingBase = new SyncFurnaceRecipes();
