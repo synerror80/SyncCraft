@@ -1,6 +1,5 @@
 package synccraft.core;
 
-// Sync Craft imports
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -45,15 +44,10 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-// MineCraft Imports
 import net.minecraft.block.BlockBreakable;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.Block;
 import net.minecraftforge.common.MinecraftForge;
-// Forge imports
-
-// Java Imports
-
 
 /** 
  * 
@@ -172,7 +166,6 @@ public class SyncCraft
 
 		//Register Blocks
 
-		// GameRegistry.registerBlock(bonjour, "test_TestBlock");
 		GameRegistry.registerBlock(enrichedDirt, "enrichedDirt");
 		GameRegistry.registerBlock(naturalGlass, "naturalGlass");
 		GameRegistry.registerBlock(hardenedGlass, "hardenedGlass");
@@ -196,15 +189,10 @@ public class SyncCraft
 		GameRegistry.registerItem(kinoite, "kinoite");
 		GameRegistry.registerItem(gypsum, "gypsum");
 
-
-		// GameRegistry.registerTileEntity(SyncFurnace3D.class, "tileentitysyncsurnace3D");
-		//	GameRegistry.registerBlock(syncFurnace3DBlock, "syncFurnace3DBlock");
-
-
+		
 		// furnace registry here
 		GameRegistry.registerBlock(syncFurnaceIdle, "mod_MainClass.syncFurnaceIdle");
-		// GameRegistry.registerBlock(syncFurnaceBurning, "mod_MainClass.syncFurnaceBurning");
-
+		
 		//Register Ingots
 		GameRegistry.registerItem(argutiteIngot, "argutiteIngot");
 		GameRegistry.registerItem(darkArgutiteIngot, "darkArgutiteIngot");
@@ -219,7 +207,6 @@ public class SyncCraft
 		LanguageRegistry.addName(gypsum, "Gypsum");
 		LanguageRegistry.addName(kinoite, "Kinoite");
 		LanguageRegistry.addName(syncFurnaceIdle, "Sync Furnace (WIP)");
-		// LanguageRegistry.addName(syncFurnaceBurning, "Sync Furnace Burning");
 		LanguageRegistry.addName(enrichedDirt, "Enriched Dirt (WIP)");
 		LanguageRegistry.addName(naturalGlass, "Natural Glass ");
 		LanguageRegistry.addName(hardenedGlass, "Hardened Glass ");
@@ -260,7 +247,6 @@ public class SyncCraft
 		ItemStack diamondStack = new ItemStack(Item.diamond, 64);
 		ItemStack blackWoolStack = new ItemStack(Block.cloth, 10, 15);
 		ItemStack whiteWoolStack = new ItemStack(Block.cloth, 10, 0);
-		//ItemStack stoneStack = new ItemStack(1, 32, 0);
 		ItemStack gravelStack = new ItemStack(Block.gravel);
 		ItemStack furnaceStack = new ItemStack(SyncCraft.syncFurnaceIdle);
 		ItemStack syncHammerStack = new ItemStack(SyncCraft.syncHammer);
@@ -272,14 +258,8 @@ public class SyncCraft
 		 *  Recipe Area
 		 */
 
-		// This is shapeless crafting
-		GameRegistry.addShapelessRecipe(diamondStack, dirtStack);
-
-
-
-		// This is Shaped crafting	 as output the row1, row2, row3 	
-
-		GameRegistry.addRecipe(humiteStack, "xy", "yx",
+	  // This is Shaped crafting	 as output the row1, row2, row3 	
+    	GameRegistry.addRecipe(humiteStack, "xy", "yx",
 
 				'x', Block.brick, 
 				'y', SyncCraft.argutite
@@ -288,7 +268,6 @@ public class SyncCraft
 
 
 		// Sync Furnace Recipe
-
 		GameRegistry.addRecipe(furnaceStack, "xyx", "yby", "xyx",
 
 				'x', Block.brick,
