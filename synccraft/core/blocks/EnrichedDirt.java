@@ -34,9 +34,6 @@ public class EnrichedDirt extends Block
 		setStepSound(Block.soundStoneFootstep);
 		setTickRandomly(true);
 		setResistance(10);
-
-
-
 	}
 
 
@@ -101,14 +98,20 @@ public class EnrichedDirt extends Block
 
 		return false;
 	}
-
-	public Block setTickRandomly(boolean par1)
-	{
-		this.needsRandomTick = par1;
-		return this;
+	
+@SideOnly(Side.CLIENT)
+	public boolean ticknow() {
+		
+		getTickRandomly();
+			
+			return true;
+		
+		
 	}
-
-
+	
+		
+		
+	
 }
 
 
