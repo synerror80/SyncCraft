@@ -1,5 +1,7 @@
 package synccraft.core.blocks;
 
+import java.util.Random;
+
 import synccraft.core.SyncCraft;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -33,5 +35,16 @@ public class JetBlock extends Block
 	{
 		this.blockIcon = ir.registerIcon("synccraft:hardenedCobblestone64");
 	} */
+	
+	// this will drop an amount of an item randomly
+	public int idDropped(int i, Random random, int fortune)
+	{
+		return SyncCraft.jet.itemID;
+	}
+
+	public int quantityDropped(Random random)
+	{
+		return 5 + random.nextInt(3);
+	}
 
 }
