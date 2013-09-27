@@ -46,14 +46,18 @@ public class SyncFurnace extends BlockContainer
      */
     private static boolean keepFurnaceInventory;
     @SideOnly(Side.CLIENT)
-    private Icon furnaceIconTop;
+    public static Icon furnaceIconTop;
     @SideOnly(Side.CLIENT)
-    private Icon furnaceIconFront;
+    public static Icon furnaceIconFront;
+    @SideOnly(Side.CLIENT)
+    public static Icon furnaceIconBottom;
+    
 
     protected SyncFurnace(int par1, boolean par2)
     {
         super(par1, Material.rock);
         this.isActive = par2;
+        
     }
 
     /**
@@ -62,6 +66,9 @@ public class SyncFurnace extends BlockContainer
     public int idDropped(int par1, Random par2Random, int par3)
     {
         return SyncCraft.syncFurnaceIdle.blockID;
+        
+        
+        
     }
 
     /**
@@ -110,6 +117,7 @@ public class SyncFurnace extends BlockContainer
         }
     }
 
+    
     @SideOnly(Side.CLIENT)
 
     /**
@@ -117,10 +125,24 @@ public class SyncFurnace extends BlockContainer
      */
     public Icon getIcon(int par1, int par2)
     {
-        return par1 == 1 ? this.furnaceIconTop : (par1 == 0 ? this.furnaceIconFront : (par1 != par2 ? this.blockIcon : this.furnaceIconFront));
+    	if(par1 == 1){
+    		return this.furnaceIconTop;
+    	}else if(par1 == 0){
+    		return furnaceIconTop;
+      	}else if(par1 != par2){
+    		return this.furnaceIconFront;
+    	}else if(par2 == 6){
+    		return this.furnaceIconBottom;
+   	
+    	}
+		return blockIcon;
+    		
+    		
+       // return par1 == 1 ? this.furnaceIconTop : (par1 == 0 ? this.furnaceIconBottom : (par1 != par2 ? this.blockIcon : this.furnaceIconFront));
+    
     }
 
-    @SideOnly(Side.CLIENT)
+   @SideOnly(Side.CLIENT)
 
     /**
      * When this method is called, your block should register all the icons it needs with the given IconRegister. This
@@ -129,9 +151,17 @@ public class SyncFurnace extends BlockContainer
     
     public void registerIcons(IconRegister par1IconRegister)  // "furnace_side"
     {
-        this.blockIcon = par1IconRegister.registerIcon("furnace_side");
-        this.furnaceIconFront = par1IconRegister.registerIcon(this.isActive ? "furnace_front_on" : "furnace_front_off");
-        this.furnaceIconTop = par1IconRegister.registerIcon("furnace_top");
+    	
+    	
+    	furnaceIconTop = par1IconRegister.registerIcon("SyncCraft:furnace_side");
+    	
+    	furnaceIconFront = par1IconRegister.registerIcon("SyncCraft:furnace_side");
+    	
+    	furnaceIconBottom = par1IconRegister.registerIcon(this.isActive ? "SyncCraft:furnace_front_off" : "SyncCraft:furnace_buttom");
+    	
+         this.blockIcon = par1IconRegister.registerIcon(this.isActive ? "SyncCraft:furnace_front_on" : "SyncCraft:furnace_front_off");
+       //  this.furnaceIconFront = par1IconRegister.registerIcon(this.isActive ? "furnace_front_on" : "furnace_front_off");
+       // this.furnaceIconTop = par1IconRegister.registerIcon("furnace_top");
     } 
 
     /**
@@ -195,30 +225,34 @@ public class SyncFurnace extends BlockContainer
         {
             int l = par1World.getBlockMetadata(par2, par3, par4);
             float f = (float)par2 + 0.5F;
-            float f1 = (float)par3 + 0.0F + par5Random.nextFloat() * 6.0F / 16.0F;
+            float f1 = (float)par3 + 0.0F + par5Random.nextFloat() * 6.0F / 12.0F;
             float f2 = (float)par4 + 0.5F;
-            float f3 = 0.52F;
+            float f3 = 0.55F;
             float f4 = par5Random.nextFloat() * 0.6F - 0.3F;
 
             if (l == 4)
             {
-                par1World.spawnParticle("smoke", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
-                par1World.spawnParticle("flame", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("portal", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f - f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 5)
             {
-                par1World.spawnParticle("smoke", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
-                par1World.spawnParticle("flame", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 8.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 7.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 6.0D, 0.0D);
+                par1World.spawnParticle("portal", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 1.0D, 0.0D);
+                par1World.spawnParticle("portal", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 1.0D, 1.0D);
+                par1World.spawnParticle("portal", (double)(f + f3), (double)f1, (double)(f2 + f4), 0.0D, 1.0D, -1.0D);
             }
             else if (l == 2)
             {
-                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
-                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f + f4), (double)f1, (double)(f2 - f3), 0.0D, 0.0D, 0.0D);
             }
             else if (l == 3)
             {
-                par1World.spawnParticle("smoke", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
-                par1World.spawnParticle("flame", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
+                par1World.spawnParticle("reddust", (double)(f + f4), (double)f1, (double)(f2 + f3), 0.0D, 0.0D, 0.0D);
             }
         }
     }
