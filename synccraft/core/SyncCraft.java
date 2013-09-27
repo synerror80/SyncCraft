@@ -100,7 +100,6 @@ public class SyncCraft
 
 	//----------------------------------------------------------------------
 
-
 	// Blocks set here
 	public static Block enrichedDirt; 
 	public static Block jetBlock; 
@@ -109,8 +108,6 @@ public class SyncCraft
 	public static Block hardenedCobblestone;
 	public static Block naturalGlass;
 	public static Block hardenedGlass;
-
-
 
 	// Furnace set here
 	public static Block syncFurnaceIdle;
@@ -132,7 +129,6 @@ public class SyncCraft
 	// The instance of your mod that Forge uses.
 	@Instance("SyncCraft")
 	public static SyncCraft instance;
-
 
 	// this is the Gui Handler for the SyncFurnace. DO NOT REMOVE !!
 	private GuiHandler GuiHandler = new GuiHandler(); 
@@ -164,8 +160,7 @@ public class SyncCraft
 		try {
 			mainConfiguration.load();
 
-
-			// Items here
+// Items here
 			Property synchammerId = SyncCraft.mainConfiguration.getItem("synchammer.id", DefaultProps.SYNCHAMMER_ID);
 			synchammerId.comment = "The main tool for Sync Craft";
 			syncHammer = (new SyncHammer(synchammerId.getInt(DefaultProps.SYNCHAMMER_ID))).setUnlocalizedName("syncHammer");
@@ -186,7 +181,7 @@ public class SyncCraft
 			gypsum = (new  Gypsum( gypsumId.getInt(DefaultProps.GYPSUM_ID))).setUnlocalizedName("gypsum");
 
 
-			// Blocks here
+// Blocks here
 			Property enrichedDirtId = SyncCraft.mainConfiguration.getBlock("enrichedDirt.id", DefaultProps.ENRICHEDDIRT_ID);
 			enrichedDirt = (new EnrichedDirt(enrichedDirtId.getInt(DefaultProps.ENRICHEDDIRT_ID),Material.ground)).setUnlocalizedName("enrichedDirt");
 			
@@ -217,13 +212,8 @@ public class SyncCraft
 			Property syncFurnaceBurningId = SyncCraft.mainConfiguration.getBlock("syncFurnaceBurning.id", DefaultProps.SYNCFURNACEBURNING_ID);
 			syncFurnaceBurningId.comment = "This is the SyncFurnace Idle.";
 			syncFurnaceBurning = (new SyncFurnace(syncFurnaceBurningId.getInt(DefaultProps.SYNCFURNACEBURNING_ID), true)).setHardness(3.5F).setUnlocalizedName("Sync Furnace").setCreativeTab(SyncCraft.syncCraftTabs);
-
-			
-			// public static final Block syncFurnaceIdle = (new SyncFurnace(4001, false)).setHardness(3.5F).setUnlocalizedName("Sync Furnace").setCreativeTab(SyncCraft.syncCraftTabs);
-			// public static final Block syncFurnaceBurning = (new SyncFurnace(4002, true)).setHardness(3.5F).setLightValue(0.875F).setUnlocalizedName("Sync Furnace");
-			
-			
-			// Ores here
+						
+// Ores here
 			Property argutiteOreId = SyncCraft.mainConfiguration.getBlock("argutiteOre.id", DefaultProps.ARGUTITEORE_ID);
 			argutiteOre = (new ArgutiteOre(argutiteOreId.getInt(DefaultProps.HARDENEDGLASS_ID),Material.rock)).setUnlocalizedName("argutiteOre");
 
@@ -248,14 +238,12 @@ public class SyncCraft
 			Property zirconiumOreId = SyncCraft.mainConfiguration.getBlock("zirconiumOre.id", DefaultProps.ZIRCONIUMORE_ID);
 			zirconiumOre = (new  ZirconiumOre( zirconiumOreId.getInt(DefaultProps.ZIRCONIUMORE_ID),Material.rock)).setUnlocalizedName("zirconiumOre");
 
-
-			// Ingots here
+// Ingots here
 			Property argutiteIngotId = SyncCraft.mainConfiguration.getItem("argutiteIngot.id", DefaultProps.ARGUTITEINGOT_ID);
 			argutiteIngot = (new  ArgutiteIngot( argutiteIngotId.getInt(DefaultProps.ARGUTITEINGOT_ID))).setUnlocalizedName("argutiteIngot");
 
 			Property darkArgutiteIngotId = SyncCraft.mainConfiguration.getBlock("darkArgutiteIngot.id", DefaultProps.DARKARGUTITEINGOT_ID);
 			darkArgutiteIngot = (new  DarkArgutiteIngot( darkArgutiteIngotId.getInt(DefaultProps.DARKARGUTITEINGOT_ID))).setUnlocalizedName("darkArgutiteIngot");
-
 
 			MinecraftForge.EVENT_BUS.register(this);
 
@@ -291,7 +279,7 @@ public class SyncCraft
 
 		// Register game blocks, items and Entity's here
 
-		//Register Blocks
+//Register Blocks
 
 		GameRegistry.registerBlock(enrichedDirt, "enrichedDirt");
 		GameRegistry.registerBlock(jetBlock, "jetBlock");
@@ -309,7 +297,7 @@ public class SyncCraft
 		GameRegistry.registerBlock(zirconiumOre, "zirconiumOre");
 		GameRegistry.registerBlock(gypsumOre, "gypsumOre");
 
-		// Register Items here
+// Register Items here
 		GameRegistry.registerItem(humite, "humite");
 		GameRegistry.registerItem(jet, "jet");
 		GameRegistry.registerItem(argutite, "argutite");
@@ -318,20 +306,18 @@ public class SyncCraft
 		GameRegistry.registerItem(gypsum, "gypsum");
 
 
-		// furnace registry here
+// furnace registry here
 		GameRegistry.registerBlock(syncFurnaceIdle, "mod_MainClass.syncFurnaceIdle");
 
-		//Register Ingots
+//Register Ingots
 		GameRegistry.registerItem(argutiteIngot, "argutiteIngot");
 		GameRegistry.registerItem(darkArgutiteIngot, "darkArgutiteIngot");
 
-		// Furnace Game Registry and Network GUI Handler
+// Furnace Game Registry and Network GUI Handler
 		GameRegistry.registerTileEntity(TileEntitySyncFurnace.class, "tileentitysyncfurnace");
 		NetworkRegistry.instance().registerGuiHandler(this, GuiHandler);
 
-
-
-
+// Language Registry here		
 		LanguageRegistry.addName(gypsum, "Gypsum");
 		LanguageRegistry.addName(jetBlock, "Jet Block");
 		LanguageRegistry.addName(kinoite, "Kinoite");
@@ -357,14 +343,13 @@ public class SyncCraft
 		LanguageRegistry.addName(zirconiumOre, "Zirconium Ore");
 		LanguageRegistry.addName(jet, "Jet (WIP)");
 
-		// This is the Crafting Tab Area
 
+// This is the Creative Tab Area
 		LanguageRegistry.instance().addStringLocalization("itemGroup.synccraft_syncCraftTab", "Sync Craft");
 
 
 
-		// Harvest level
-
+// Harvest level
 		MinecraftForge.setBlockHarvestLevel(argutiteOre, "pickaxe", 1);
 
 
@@ -372,14 +357,8 @@ public class SyncCraft
 		/** ItemStack Area
 		 *  For ItemStack You can pass in Block/Item - Amount of Item to get - ( amount of items to get ) Damage 
 		 */
-		ItemStack dirtStack = new ItemStack(Block.dirt, 32);
-		ItemStack diamondStack = new ItemStack(Item.diamond, 64);
-		ItemStack blackWoolStack = new ItemStack(Block.cloth, 10, 15);
-		ItemStack whiteWoolStack = new ItemStack(Block.cloth, 10, 0);
-		ItemStack gravelStack = new ItemStack(Block.gravel);
 		ItemStack furnaceStack = new ItemStack(SyncCraft.syncFurnaceIdle);
 		ItemStack syncHammerStack = new ItemStack(SyncCraft.syncHammer);
-		ItemStack humiteStack = new ItemStack(SyncCraft.humite);
 		ItemStack darkArgutiteIngotStack = new ItemStack(SyncCraft.darkArgutiteIngot);
 		ItemStack jetBlockStack = new ItemStack(SyncCraft.jetBlock);
 		ItemStack coalBlockStack = new ItemStack(Block.coalBlock);
@@ -389,14 +368,7 @@ public class SyncCraft
 		 *  Recipe Area
 		 */
 
-		// This is Shaped crafting	 as output the row1, row2, row3 	
-		GameRegistry.addRecipe(humiteStack, "xy", "yx",
-
-				'x', Block.brick, 
-				'y', SyncCraft.argutite
-
-				);
-		
+// This is Shaped crafting	 as output the row1, row2, row3 	
 		GameRegistry.addRecipe(enrichedDirtStack, "yxy", "xzx", "yxy",
 
 				'x', Block.dirt, 
@@ -405,8 +377,7 @@ public class SyncCraft
 				);
 
 
-
-		// Sync Furnace Recipe
+// Sync Furnace Recipe
 		GameRegistry.addRecipe(furnaceStack, "xyx", "yby", "xyx",
 
 				'x', Block.brick,
@@ -426,16 +397,11 @@ public class SyncCraft
 				'x', SyncCraft.jetBlock
 				
 				);
-
-
 		// this is the smelting area
-
 		//							input item			output 		XP
 		// GameRegistry.addSmelting(Block.dirt.blockID, diamondStack, 0.1f);
 		// FurnaceRecipes.smelting().addSmelting(Block.cloth.blockID, 15, whiteWoolStack, 1.0f);
 		//	FurnaceRecipes.smelting(syncFurnaceIdle.blockID).addSmelting(mod_MainClass.argutiteIngot.itemID, new ItemStack(mod_MainClass.darkArgutiteIngot), 0.25F);
-
-
 
 	}
 
