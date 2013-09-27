@@ -25,7 +25,6 @@ public class Cobalt extends Block
 	public  Cobalt(int id, Material material) 
 	{
 		super(id, material);
-		setUnlocalizedName("cobalt");
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);

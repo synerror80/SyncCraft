@@ -25,7 +25,6 @@ public class ZirconiumOre extends Block
 	public  ZirconiumOre(int id, Material material) 
 	{
 		super(id, material);
-		setUnlocalizedName("zirconiumOre");
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);

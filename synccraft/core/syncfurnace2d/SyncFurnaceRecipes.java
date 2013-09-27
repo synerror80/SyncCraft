@@ -40,8 +40,18 @@ public class SyncFurnaceRecipes
 
     private SyncFurnaceRecipes()
     {
-        this.addSmelting(SyncCraft.argutite.itemID, new ItemStack(SyncCraft.argutiteIngot), 1.25F);
+        this.addSmelting(SyncCraft.argutite.itemID, new ItemStack(SyncCraft.argutiteIngot), 0.25F);
         this.addSmelting(SyncCraft.argutiteIngot.itemID, new ItemStack(SyncCraft.darkArgutiteIngot), 0.20F);
+        
+        this.addSmelting(SyncCraft.jetBlock.blockID, new ItemStack(Item.coal), 0.25F);
+        
+        this.addSmelting(SyncCraft.naturalGlass.blockID, new ItemStack(SyncCraft.hardenedGlass, 1), 0.05F);
+        
+        this.addSmelting(SyncCraft.enrichedDirt.blockID, new ItemStack(Block.dirt, 3), 0.05F);
+        this.addSmelting(SyncCraft.enrichedGravel.blockID, new ItemStack(Block.gravel, 3), 0.05F);
+        this.addSmelting(SyncCraft.enrichedSand.blockID, new ItemStack(Block.sand, 3), 0.05F);
+        this.addSmelting(SyncCraft.hardenedCobblestone.blockID, new ItemStack(Block.cobblestone, 1), 0.05F);
+        
     }
 
     /**

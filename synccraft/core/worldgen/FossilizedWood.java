@@ -25,7 +25,6 @@ public class FossilizedWood extends Block
 	public  FossilizedWood(int id, Material material) 
 	{
 		super(id, material);
-		setUnlocalizedName("fossilizedWood");
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);

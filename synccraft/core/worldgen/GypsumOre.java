@@ -27,7 +27,6 @@ public class GypsumOre extends BlockBreakable
 	public  GypsumOre(int par1, Material par2Material, boolean par3) 
 	{
 		super(par1, "synccraft:gypsumore", par2Material, par3);
-		setUnlocalizedName("gypsumOre");
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);

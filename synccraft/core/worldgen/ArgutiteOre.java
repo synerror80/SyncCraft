@@ -25,7 +25,6 @@ public class ArgutiteOre extends Block
 	public  ArgutiteOre(int id, Material material) 
 	{
 		super(id, material);
-		setUnlocalizedName("argutiteOre");
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);
@@ -51,7 +50,7 @@ public class ArgutiteOre extends Block
 
 	public int quantityDropped(Random random)
 	{
-		return 2 + random.nextInt(5);
+		return 2 + random.nextInt(2);
 	}
 
 

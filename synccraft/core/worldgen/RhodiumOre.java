@@ -25,7 +25,6 @@ public class RhodiumOre extends Block
 	public  RhodiumOre(int id, Material material) 
 	{
 		super(id, material);
-		setUnlocalizedName("rhodiumore");
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);

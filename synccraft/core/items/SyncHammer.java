@@ -12,6 +12,7 @@ import net.minecraft.item.EnumRarity;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionHelper;
 
 /** 
  * 
@@ -35,6 +36,8 @@ public class SyncHammer extends Item  {
 		setMaxDamage(10);
 		setMaxStackSize(1);
 		setFull3D();
+		setPotionEffect(PotionHelper.speckledMelonEffect);
+		
 	}
 
 	@SideOnly(Side.CLIENT)

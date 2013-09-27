@@ -22,7 +22,7 @@ public class Jet extends Item {
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setNoRepair();	
 		setMaxDamage(10);
-		setMaxStackSize(64);
+		setMaxStackSize(256);
 		setFull3D();
 	}
 

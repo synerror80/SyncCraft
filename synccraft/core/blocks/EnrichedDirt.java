@@ -28,13 +28,12 @@ public class EnrichedDirt extends Block
 {
 
 	public EnrichedDirt(int id, Material material) {
-		super(id, material);
-		setUnlocalizedName("enrichedDirt");
+		super(id, Material.ground);
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);
 		setTickRandomly(true);
-		setResistance(5);
+		setResistance(10);
 
 
 

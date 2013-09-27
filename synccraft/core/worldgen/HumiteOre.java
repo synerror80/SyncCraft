@@ -26,7 +26,6 @@ public class HumiteOre extends Block
 	public  HumiteOre(int id, Material material) 
 	{
 		super(id, material);
-		setUnlocalizedName("humiteOre");
 		setHardness(1.0f);
 		setCreativeTab(SyncCraft.syncCraftTabs);
 		setStepSound(Block.soundStoneFootstep);

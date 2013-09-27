@@ -14,7 +14,7 @@ public class NaturalGlass extends BlockBreakable
 	{
 		super(par1, "synccraft:naturalglass", par2Material, par3);
 		this.setCreativeTab(SyncCraft.syncCraftTabs);;
-		setHardness(15);
+		setHardness(1);
 
 	}
 
